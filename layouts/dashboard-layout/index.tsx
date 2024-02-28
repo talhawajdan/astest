@@ -7,12 +7,13 @@ import TopNavBar from "./top-navbar";
 
 function DashboardLayout({ children, ...other }: any) {
   const theme = useTheme();
-  const media = useMediaQuery(theme.breakpoints.down("lg"));
-
-  const screenSizeHandler = useMediaQuery(theme.breakpoints.up("sm"));
+  // to handle drawer in different size
+  const screenSizeHandler = useMediaQuery(theme.breakpoints.up("md"));
+  // to handle drawer in different size
   const [open, setOpen] = useState(screenSizeHandler ? true : false);
 
   const handleDrawer = () => (open ? setOpen(false) : setOpen(true));
+  // open and close drawer in screen size
   useEffect(() => {
     if (screenSizeHandler) {
       setOpen(true);

@@ -25,7 +25,7 @@ function TopNavBar(props: any) {
   return (
     <Box sx={Styles.mainBoxStyle(leftopen, theme)}>
       <Grid container>
-        <Grid xs={12} item display="flex" alignItems="center">
+        <Grid xs={12} item display="flex" alignItems="center" flexWrap={"wrap"}>
           <Typography
             onClick={handleDrawer}
             fontSize={"25px"}
@@ -34,7 +34,13 @@ function TopNavBar(props: any) {
           >
             Investments
           </Typography>
-          <Box ml={"auto"} display={"flex"} alignItems={"center"} gap={3}>
+          <Box
+            ml={"auto"}
+            display={"flex"}
+            alignItems={"center"}
+            gap={3}
+            flexWrap={"wrap"}
+          >
             <Box
               sx={{
                 bgcolor: "#F5F7FA",
@@ -42,7 +48,11 @@ function TopNavBar(props: any) {
                 borderRadius: 6,
               }}
             >
-              <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+              <IconButton
+                type="button"
+                sx={{ p: "10px", maxWidth: 150 }}
+                aria-label="search"
+              >
                 <SearchIcon />
               </IconButton>
               <InputBase
