@@ -49,6 +49,16 @@ const Styles = {
       "& .MuiSvgIcon-root": {
         color: "#1814F3",
       },
+      "&:before": {
+        content: `" "`,
+        background: "#2D60FF",
+        width: "5px",
+        height: "50px",
+        border: "1px solid #2D60FF",
+        borderRadius: "0px 10px 10px 0px",
+        position: "absolute",
+        left: 0,
+      },
     },
   },
   linkStyle: {
