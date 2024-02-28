@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Grid, Paper, Typography } from "@mui/material";
 //icons
-import NumberOfInvestmentsIcon from "@/assets/icons/dashboad-main/number-of-investments-icon";
-import TotalInvestedAmountIcon from "@/assets/icons/dashboad-main/total-invested-amount-icon";
+import NumberOfInvestmentsIcon from "@/assets/icons/dashboard-main/number-of-investments-icon";
+import TotalInvestedAmountIcon from "@/assets/icons/dashboard-main/total-invested-amount-icon";
 
 function DashboardSection() {
   return (
@@ -97,7 +97,6 @@ const Style = {
     height: "100px",
     borderRadius: 4,
   },
-  cardWapper: () => ({}),
   iconWapperStyles: (bgcolor: string) => ({
     bgcolor: bgcolor,
     width: "50px",
