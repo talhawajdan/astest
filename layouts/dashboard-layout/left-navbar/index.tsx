@@ -17,7 +17,7 @@ import { NavListData } from "./left-navbar.data";
 //=====================================================================================
 // CONSTANTS
 
-export const drawerWidth = 250;
+export const drawerWidth = "250px";
 //============================================================
 function LeftNavbar(props: any) {
   const theme: any = useTheme();
@@ -83,7 +83,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
     backgroundColor: theme.palette.primary.main,
     borderRadius: 2,
   },
-  background: theme.palette.grey[800],
+  background: "#ffff",
   width: `calc(${theme.spacing(0)} + -2px)`,
   [theme.breakpoints.up("md")]: {
     width: `calc(${theme.spacing(-1)} + -2px)`,
