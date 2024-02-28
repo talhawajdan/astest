@@ -11,7 +11,7 @@ function InvestmentsIcons(props: SvgIconProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1_154)">
+        <g clipPath="url(#clip0_1_154)">
           <path
             d="M3.1366 8.18172H0.909362C0.407234 8.18172 0 8.58895 0 9.09108V19.0911C0 19.5928 0.407234 20 0.909362 20H3.1366C3.63872 20 4.04553 19.5928 4.04553 19.0911V9.09108C4.04553 8.58895 3.63872 8.18172 3.1366 8.18172Z"
             fill="currentColor"

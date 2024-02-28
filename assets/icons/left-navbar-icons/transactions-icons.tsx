@@ -11,7 +11,7 @@ function TransactionsIcons(props: SvgIconProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1_144)">
+        <g clipPath="url(#clip0_1_144)">
           <path
             d="M4.16669 18.3334C4.16721 18.7752 4.34297 19.1988 4.65542 19.5113C4.96787 19.8237 5.39149 19.9995 5.83335 20H14.1667C14.6086 19.9995 15.0322 19.8237 15.3446 19.5113C15.6571 19.1988 15.8328 18.7752 15.8334 18.3334V17.6042H4.16669V18.3334Z"
             fill="currentColor"

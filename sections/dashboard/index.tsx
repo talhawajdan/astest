@@ -3,6 +3,10 @@ import { Box, Grid, Paper, Typography } from "@mui/material";
 //icons
 import NumberOfInvestmentsIcon from "@/assets/icons/dashboard-main/number-of-investments-icon";
 import TotalInvestedAmountIcon from "@/assets/icons/dashboard-main/total-invested-amount-icon";
+import DebitAndCreditChart from "./debit-and-credit-chart";
+import MonthlyRevenueChart from "./monthly-revenue-chart";
+import ContactFrom from "./contact-from";
+import TrendingTable from "./trending-table";
 
 function DashboardSection() {
   return (
@@ -17,6 +21,7 @@ function DashboardSection() {
           flexWrap={"wrap"}
           justifyContent={"center"}
           item
+          px={2}
         >
           <Paper variant="elevation" elevation={2} sx={Style.paperMain}>
             <Box display="flex" alignItems={"center"} gap={2}>
@@ -42,6 +47,7 @@ function DashboardSection() {
           flexWrap={"wrap"}
           justifyContent={"center"}
           item
+          px={2}
         >
           <Paper variant="elevation" elevation={2} sx={Style.paperMain}>
             <Box display="flex" alignItems={"center"} gap={2}>
@@ -67,6 +73,7 @@ function DashboardSection() {
           flexWrap={"wrap"}
           justifyContent={"center"}
           item
+          px={2}
         >
           <Paper variant="elevation" elevation={2} sx={Style.paperMain}>
             <Box display="flex" alignItems={"center"} gap={2}>
@@ -83,6 +90,40 @@ function DashboardSection() {
               </Box>
             </Box>
           </Paper>
+        </Grid>
+      </Grid>
+      <Grid container mt={2} px={2}>
+        <Grid xs={12} lg={5} px={2} item>
+          <Box my={2}>
+            <Typography sx={Style.TypographyHeadingMainStyle}>
+              Debit & Credit Overview
+            </Typography>
+          </Box>
+          <DebitAndCreditChart />
+        </Grid>
+        <Grid xs={12} lg={7} px={2} item>
+          <Box my={2}>
+            <Typography sx={Style.TypographyHeadingMainStyle}>
+              Monthly Revenue
+            </Typography>
+          </Box>
+          <MonthlyRevenueChart />
+        </Grid>
+        <Grid xs={12} lg={5.5} item px={2}>
+          <Box my={2}>
+            <Typography sx={Style.TypographyHeadingMainStyle}>
+              Contact Form
+            </Typography>
+          </Box>
+          <ContactFrom />
+        </Grid>
+        <Grid xs={12} lg={6.5} item px={2}>
+          <Box my={2}>
+            <Typography sx={Style.TypographyHeadingMainStyle}>
+              Trending Stock
+            </Typography>
+          </Box>
+          <TrendingTable />
         </Grid>
       </Grid>
       {/* cards section */}
@@ -118,6 +159,12 @@ const Style = {
     color: "#232323",
     fontWeight: 600,
     fontSize: "16px",
+    lineHeight: "19.36spx",
+  },
+  TypographyHeadingMainStyle: {
+    color: "#333B69",
+    fontWeight: 600,
+    fontSize: "18px",
     lineHeight: "19.36spx",
   },
 };

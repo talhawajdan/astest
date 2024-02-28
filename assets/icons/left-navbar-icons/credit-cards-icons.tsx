@@ -11,7 +11,7 @@ function CreditCardsIcons(props: SvgIconProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1_167)">
+        <g clipPath="url(#clip0_1_167)">
           <path
             d="M17.6621 5.51029V5.2367C17.6621 3.979 16.6389 2.95576 15.3812 2.95576H2.28094C1.0232 2.9558 0 3.979 0 5.2367V5.51029H17.6621Z"
             fill="currentColor"

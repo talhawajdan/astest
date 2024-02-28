@@ -36,12 +36,7 @@ function TopNavBar(props: any) {
             </IconButton>
           )}
 
-          <Typography
-            onClick={handleDrawer}
-            fontSize={"25px"}
-            color={"#343C6A"}
-            fontWeight={600}
-          >
+          <Typography fontSize={"25px"} color={"#343C6A"} fontWeight={600}>
             Investments
           </Typography>
           <Box

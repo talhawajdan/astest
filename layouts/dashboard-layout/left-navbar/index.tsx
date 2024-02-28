@@ -32,8 +32,14 @@ function LeftNavbar(props: any) {
 
         {/* Left NavBar List Component  */}
         <Box mt={6}>
-          {NavListData.map(({ label, icon, link }) => (
-            <NavbarList pathname={""} link={link} Icon={icon} label={label} />
+          {NavListData.map(({ label, icon, link }, index) => (
+            <NavbarList
+              key={index}
+              pathname={""}
+              link={link}
+              Icon={icon}
+              label={label}
+            />
           ))}
         </Box>
       </Box>
