@@ -10,7 +10,7 @@ function DashboardLayout({ children, ...other }: any) {
   // to handle drawer in different size
   const screenSizeHandler = useMediaQuery(theme.breakpoints.up("md"));
   // to handle drawer in different size
-  const [open, setOpen] = useState(screenSizeHandler ? true : false);
+  const [open, setOpen] = useState(true);
 
   const handleDrawer = () => (open ? setOpen(false) : setOpen(true));
   // open and close drawer in screen size

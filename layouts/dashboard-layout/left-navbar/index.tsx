@@ -1,19 +1,12 @@
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, useMediaQuery } from "@mui/material";
 import React from "react";
-import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
-import { useTheme } from "@emotion/react";
-import Link from "next/link";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { styled, Theme, CSSObject } from "@mui/material/styles";
+import { styled, Theme, CSSObject, useTheme } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
-import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import EnhancedEncryptionIcon from "@mui/icons-material/EnhancedEncryption";
-import ClearIcon from "@mui/icons-material/Clear";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import LogoIcon from "@/assets/icons/logo-icon";
 import NavbarList from "./navbar-list";
 import { NavListData } from "./left-navbar.data";
-
+//icons
+import MenuIcon from "@mui/icons-material/Menu";
+import LogoIcon from "@/assets/icons/logo-icon";
 //=====================================================================================
 // CONSTANTS
 
@@ -22,12 +15,18 @@ export const drawerWidth = "250px";
 function LeftNavbar(props: any) {
   const theme: any = useTheme();
   const { open, handleDrawer } = props;
+  const screenSizeHandler = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Drawer variant="permanent" open={open}>
       <Box sx={{ maxHeight: "100vh" }}>
         <DrawerHeader>
-          <Box>
+          <Box display="flex" justifyContent="center" alignItems="center">
             <LogoIcon sx={{ fontSize: 110, height: 40 }} />
+            {screenSizeHandler && (
+              <IconButton onClick={handleDrawer}>
+                <MenuIcon />
+              </IconButton>
+            )}
           </Box>
         </DrawerHeader>
 

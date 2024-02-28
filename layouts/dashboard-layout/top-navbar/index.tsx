@@ -9,6 +9,7 @@ import {
   InputAdornment,
   InputBase,
   IconButton,
+  useMediaQuery,
 } from "@mui/material";
 
 //ICONS
@@ -16,16 +17,25 @@ import SearchIcon from "@mui/icons-material/Search";
 import SettingOutlineIcon from "@/assets/icons/top-navbar-icons/setting-outline-icon";
 import NotificationBellIcon from "@/assets/icons/top-navbar-icons/notification-bell-icon";
 import person from "@/assets/png/person.png";
+import MenuIcon from "@mui/icons-material/Menu";
 //next imports
 import Image from "next/image";
 
 function TopNavBar(props: any) {
   const theme: any = useTheme();
   const { handleDrawer, leftopen } = props;
+  // to handle drawer in different size
+  const screenSizeHandler = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box sx={Styles.mainBoxStyle(leftopen, theme)}>
       <Grid container>
         <Grid xs={12} item display="flex" alignItems="center" flexWrap={"wrap"}>
+          {screenSizeHandler && (
+            <IconButton onClick={handleDrawer}>
+              <MenuIcon />
+            </IconButton>
+          )}
+
           <Typography
             onClick={handleDrawer}
             fontSize={"25px"}
